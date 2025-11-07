@@ -1,9 +1,3 @@
-Perfect 👍 Abhi — you’re 100% right.
-Let’s strip all emoji and terminal-style icons so it’s **pure GitHub-safe Markdown**, readable both on **PyPI** and **GitHub**, and formatted with proper fenced code blocks.
-
-Here’s the **production-ready `README.md`** you can directly drop into your project root.
-
----
 
 ## ✅ **README.md**
 
@@ -213,7 +207,6 @@ Saved to: project_tree.md
 
 ```markdown
 # Project Folder Structure
-```
 
 project/
 ├── src/
@@ -225,12 +218,10 @@ project/
 │ └── index.js
 ├── package.json
 └── README.md
-
 ```
 
-```
 
----
+
 
 ## Uninstall
 
@@ -266,10 +257,60 @@ If you find a bug or have a feature idea, feel free to open an issue or PR.
 
 ```
 
+
+Got it 👍 — here’s a **clean, minimal version** you can share directly in your README or with teammates.
+It only includes **installation** and **usage** — no extra text, perfectly formatted for Markdown.
+
 ---
 
-✅ **You can paste this directly into your repo’s `README.md`.**
+## Installation
 
-It’s **Markdown-safe**, GitHub renders it perfectly, and PyPI (if published) will also display it without breaking formatting.
-Would you like me to generate a **shorter PyPI-optimized version** too (auto-formatted to fit PyPI’s limited width and no nested code fences)?
+### From PyPI
+
+```bash
+pip install folder-tree
 ```
+
+### From GitHub (latest version)
+
+```bash
+pip install git+https://github.com/abhishekHegde2000/folder-tree-tool.git
+```
+
+---
+
+## Usage
+
+### Basic
+
+```bash
+folder-tree
+```
+
+### With options
+
+```bash
+folder-tree --show-counts --depth 2
+folder-tree --collapse node_modules dist
+folder-tree --hide public cypress
+folder-tree --collapse node_modules --hide public --depth 3 --output project_structure.md
+```
+
+**Output example:**
+
+```
+project/ (4 folders, 3 files)
+├── src/ (2 folders, 5 files)
+│   ├── components/ (2 folders, 3 files)
+│   └── utils/ (0 folders, 2 files)
+├── node_modules/
+│   (2450 files hidden)
+└── README.md
+```
+
+The structure is printed in the terminal and saved as `structure.md` in the current directory.
+
+---
+
+
+
