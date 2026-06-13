@@ -308,6 +308,80 @@ project/ (4 folders, 3 files)
 └── README.md
 ```
 
+
+Local Installation :
+
+Here is the complete, unbroken, step-by-step guide from the moment you clone the repository all the way to running the tool globally.
+
+---
+
+### Step 1: Clone the Repository
+
+Open your terminal (PowerShell or Command Prompt) and run the following commands to clone the code and move into the project directory:
+
+```powershell
+cd C:\code
+git clone https://github.com/abhishekHegde2000/folder-tree-tool.git
+cd folder-tree-tool
+
+```
+
+---
+
+### Step 2: Install Locally in Editable Mode
+
+While inside the `C:\code\folder-tree-tool` directory, run this command to install the package to your system:
+
+```powershell
+pip install -e .
+
+```
+
+*Note down the installation log. It will show a warning stating that `folder-tree.exe` is installed in a specific directory (like `C:\Users\abhih\AppData\Local\Python\pythoncore-3.14-64\Scripts`) which is not on your PATH.*
+
+---
+
+### Step 3: Copy your Scripts Path
+
+Based on your Python version, copy the exact path where the executable was sent. For your system, it is:
+
+```text
+C:\Users\abhih\AppData\Local\Python\pythoncore-3.14-64\Scripts
+
+```
+
+---
+
+### Step 4: Add the Path to Windows Environment Variables
+
+1. Press the **Windows Key** on your keyboard, type **`env`**, and select **Edit the system environment variables**.
+2. Click the **Environment Variables...** button at the bottom right of the window.
+3. Look at the top section labeled **User variables for abhih** and click on the variable named **`Path`** to highlight it.
+4. Click the **Edit...** button right below that section.
+5. Click **New** on the right side of the popup window, and paste your path:
+`C:\Users\abhih\AppData\Local\Python\pythoncore-3.14-64\Scripts`
+6. Click **OK** on all three open windows to save your changes.
+
+---
+
+### Step 5: Restart the Terminal
+
+1. **Close** your current PowerShell window completely.
+2. Open a **brand new** PowerShell window (this forces Windows to load your updated PATH settings).
+
+---
+
+### Step 6: Verify and Run
+
+Navigate to any folder on your computer that you want to visualize, and run the command:
+
+```powershell
+folder-tree
+
+```
+
+The tool will now execute properly and generate your Markdown directory tree structure!
+
 The structure is printed in the terminal and saved as `structure.md` in the current directory.
 
 ---
